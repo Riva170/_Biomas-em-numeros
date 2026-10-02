@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biomas em Números — Matemática e Impacto Ambiental</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f3f7f4;color:#17351f;line-height:1.55}
+header{background:#1f6f43;color:white;padding:28px 18px;text-align:center}
+main{max-width:1100px;margin:auto;padding:20px}
+section,.card{background:white;border-radius:14px;padding:22px;margin:18px 0;box-shadow:0 3px 12px #0001}
+h1,h2,h3{color:#195c36}.hero h1{color:white}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+input,select,button{padding:10px;border-radius:8px;border:1px solid #bbb;font-size:1rem}
+button{background:#1f6f43;color:white;border:0;cursor:pointer}.resultado{font-weight:bold;margin-top:10px}
+.exercise{border-left:5px solid #1f6f43;padding:15px;margin:15px 0;background:#f7faf7}
+.answer{display:none;background:#eef7ef;padding:12px;border-radius:8px;margin-top:8px}
+.small{font-size:.92rem;color:#496050}
+table{border-collapse:collapse;width:100%;margin:10px 0}th,td{border:1px solid #ccc;padding:9px;text-align:left}
+nav{position:sticky;top:0;background:white;padding:10px;text-align:center;box-shadow:0 2px 7px #0002;z-index:2}
+nav a{margin:0 8px;color:#195c36;text-decoration:none;font-weight:bold}
+footer{text-align:center;padding:25px;color:#52655a}
+</style>
+</head>
+<body>
+<header class="hero">
+<h1>🌎 BIOMAS EM NÚMEROS</h1>
+<p>Guia pedagógico de Matemática, Ecologia e Educação Ambiental</p>
+<p>Calculadora • Conteúdo para estudo • Exercícios • Discussão em sala • Gabarito</p>
+</header>
+
+<nav>
+<a href="#conteudo">Conteúdo</a>
+<a href="#calculadora">Calculadora</a>
+<a href="#exercicios">Exercícios</a>
+<a href="#sala">Discussão em sala</a>
+<a href="#avaliacao">Avaliação</a>
+</nav>
+
+<main>
+<section id="conteudo">
+<h2>📚 Conteúdo a ser estudado</h2>
+<p>Antes de resolver os exercícios, estude os conceitos matemáticos usados para analisar situações ambientais.</p>
+<div class="grid">
+<div class="card"><h3>Porcentagem</h3><p>Usada para representar parcelas de uma área, redução de consumo, preservação, desmatamento e variações.</p><p><b>Fórmula:</b> porcentagem = (parte ÷ total) × 100.</p></div>
+<div class="card"><h3>Razão e proporção</h3><p>Permitem comparar quantidades, como consumo de água, emissão de CO₂ e quantidade de árvores.</p></div>
+<div class="card"><h3>Regra de três</h3><p>Ajuda a encontrar valores proporcionais quando uma quantidade aumenta ou diminui.</p></div>
+<div class="card"><h3>Unidades e conversões</h3><p>Trabalhe com L, mL, m², km², hectares, kg e toneladas. Lembre: 1 tonelada = 1.000 kg.</p></div>
+<div class="card"><h3>Média aritmética</h3><p>Some os valores e divida pela quantidade de observações. É útil para temperaturas, chuvas e consumo.</p></div>
+<div class="card"><h3>Área e perímetro</h3><p>Permitem estudar representações simplificadas de territórios e áreas de preservação.</p></div>
+<div class="card"><h3>Estatística e gráficos</h3><p>Organize dados em tabelas, compare valores e interprete gráficos ambientais.</p></div>
+<div class="card"><h3>Equações e estimativas</h3><p>Use incógnitas para representar quantidades desconhecidas e interprete o resultado no contexto ambiental.</p></div>
+</div>
+<h3>🌱 Constantes utilizadas neste sistema</h3>
+<table>
+<tr><th>Grandeza</th><th>Valor de referência</th></tr>
+<tr><td>Energia elétrica</td><td>0,085 kg CO₂ por kWh</td></tr>
+<tr><td>Gasolina</td><td>2,269 kg CO₂ por litro</td></tr>
+<tr><td>Diesel</td><td>2,603 kg CO₂ por litro</td></tr>
+<tr><td>Banho</td><td>9 litros por minuto</td></tr>
+<tr><td>Absorção de uma árvore</td><td>22 kg CO₂ por árvore/ano</td></tr>
+</table>
+<p class="small">Os fatores acima são os mesmos utilizados no código C++ fornecido. Eles funcionam aqui como valores de referência didática.</p>
+</section>
+
+<section id="calculadora">
+<h2>🧮 Calculadora de Impactos Ambientais</h2>
+<div class="grid">
+<label>Energia mensal (kWh)<br><input id="kwh" type="number" min="0" value="200"></label>
+<label>Gasolina mensal (L)<br><input id="gas" type="number" min="0" value="150"></label>
+<label>Diesel mensal (L)<br><input id="diesel" type="number" min="0" value="100"></label>
+<label>Banho diário (minutos)<br><input id="banho" type="number" min="0" value="12"></label>
+</div>
+<br><button onclick="calcular()">Calcular impacto</button>
+<div id="calcResultado" class="resultado"></div>
+</section>
+
+<section>
+<h2>🔎 Exemplo resolvido</h2>
+<p>Uma família consome 200 kWh de energia elétrica por mês.</p>
+<p><b>Emissão mensal:</b> 200 × 0,085 = 17 kg de CO₂.</p>
+<p><b>Emissão anual:</b> 17 × 12 = 204 kg de CO₂ por ano.</p>
+<p>Esse modelo mostra como uma informação cotidiana pode ser transformada em uma situação matemática relacionada à educação ambiental.</p>
+</section>
+
+<section id="exercicios">
+<h2>📝 Lista de Exercícios</h2>
+
+<div class="exercise"><b>Questão 1 — Consumo hídrico</b>
+<p>Um estudante toma banho por 12 minutos todos os dias. Use 9 L/min.</p>
+<p>a) Quantos litros gasta em um dia? <input id="q1a" type="number"></p>
+<p>b) Quantos litros gasta em 30 dias? <input id="q1b" type="number"></p>
+<button onclick="corrigir(1)">Corrigir</button>
+<div id="r1" class="answer"></div></div>
+
+<div class="exercise"><b>Questão 2 — Pegada de carbono</b>
+<p>Um veículo consome 150 litros de gasolina por mês. Use 2,269 kg CO₂/L.</p>
+<p>a) Qual a emissão mensal? <input id="q2a" type="number" step="0.01"></p>
+<p>b) Qual a emissão anual em kg e em toneladas? <input id="q2b" type="number" step="0.01"></p>
+<button onclick="corrigir(2)">Corrigir</button>
+<div id="r2" class="answer"></div></div>
+
+<div class="exercise"><b>Questão 3 — Neutralização</b>
+<p>Uma pequena fábrica emite 1.500 kg de CO₂ por ano. Cada árvore absorve 22 kg por ano. Quantas árvores inteiras são necessárias?</p>
+<input id="q3" type="number"><button onclick="corrigir(3)">Corrigir</button>
+<div id="r3" class="answer"></div></div>
+
+<div class="exercise"><b>Questão 4 — Porcentagem</b>
+<p>Uma área de estudo possui 800 hectares. Se 25% forem destinados à preservação, quantos hectares serão preservados?</p>
+<input id="q4" type="number"><button onclick="corrigir(4)">Corrigir</button>
+<div id="r4" class="answer"></div></div>
+
+<div class="exercise"><b>Questão 5 — Média</b>
+<p>As precipitações registradas foram 180, 220, 160, 140 e 100 mm. Calcule a média.</p>
+<input id="q5" type="number" step="0.01"><button onclick="corrigir(5)">Corrigir</button>
+<div id="r5" class="answer"></div></div>
+
+<div class="exercise"><b>Questão 6 — Conversão</b>
+<p>Uma ação ambiental evitou o descarte de 2.750 kg de resíduos. Quantas toneladas isso representa?</p>
+<input id="q6" type="number" step="0.001"><button onclick="corrigir(6)">Corrigir</button>
+<div id="r6" class="answer"></div></div>
+
+<div class="exercise"><b>Questão 7 — Regra de três</b>
+<p>Se uma área utiliza 500 L de água por dia e outra área semelhante possui três vezes a dimensão, qual seria o consumo proporcional?</p>
+<input id="q7" type="number"><button onclick="corrigir(7)">Corrigir</button>
+<div id="r7" class="answer"></div></div>
+
+<div class="exercise"><b>Questão 8 — Área</b>
+<p>Considere uma área retangular de estudo com 2 km de comprimento e 1,5 km de largura. Calcule a área em km².</p>
+<input id="q8" type="number" step="0.01"><button onclick="corrigir(8)">Corrigir</button>
+<div id="r8" class="answer"></div></div>
+
+<button onclick="mostrarGabarito()">Mostrar gabarito completo</button>
+<div id="gabarito" class="answer">
+<b>Gabarito:</b><br>
+1a) 108 L. 1b) 3.240 L.<br>
+2a) 340,35 kg. 2b) 4.084,20 kg = 4,0842 t.<br>
+3) 69 árvores inteiras (arredondamento para cima).<br>
+4) 200 hectares.<br>
+5) 160 mm.<br>
+6) 2,75 toneladas.<br>
+7) 1.500 L/dia.<br>
+8) 3 km².
+</div>
+</section>
+
+<section id="sala">
+<h2>💬 Conteúdos a serem discutidos em sala</h2>
+<p>Após a realização da lista de exercícios, proponha uma discussão interdisciplinar. O objetivo é fazer o estudante perceber que os cálculos representam situações ambientais e não apenas operações isoladas.</p>
+<div class="grid">
+<div class="card"><h3>1. Matemática e Ecologia</h3><p>Como números, medidas, tabelas e gráficos ajudam a compreender fenômenos ambientais?</p></div>
+<div class="card"><h3>2. Água</h3><p>O que os cálculos de consumo revelam sobre hábitos cotidianos? Como comparar consumo individual e coletivo?</p></div>
+<div class="card"><h3>3. Carbono</h3><p>Como transformar consumo de combustível e energia em estimativas de emissão? Quais são as limitações de uma estimativa baseada em fatores fixos?</p></div>
+<div class="card"><h3>4. Biomas brasileiros</h3><p>Como diferentes condições ambientais podem gerar diferentes conjuntos de dados para análise matemática?</p></div>
+<div class="card"><h3>5. Gráficos e interpretação</h3><p>Que tipo de gráfico representa melhor uma comparação entre meses, áreas ou categorias?</p></div>
+<div class="card"><h3>6. Etnomatemática</h3><p>Que conhecimentos matemáticos podem aparecer em práticas tradicionais de manejo, agricultura, pesca, construção, medição e organização do espaço?</p></div>
+<div class="card"><h3>7. Sustentabilidade</h3><p>Quais indicadores matemáticos poderiam ser acompanhados pela escola ao longo do ano?</p></div>
+<div class="card"><h3>8. Análise crítica dos dados</h3><p>Um número sempre representa toda a realidade? Discuta fonte, período, unidade, escala, arredondamento e contexto.</p></div>
+</div>
+<h3>🗣️ Perguntas para debate</h3>
+<ol>
+<li>Qual cálculo foi mais fácil e qual exigiu maior interpretação?</li>
+<li>Como uma mudança pequena no consumo diário pode alterar o resultado anual?</li>
+<li>Por que é importante informar a unidade junto ao número?</li>
+<li>Como os dados matemáticos podem apoiar decisões de preservação ambiental?</li>
+<li>Quais dados sobre o bioma estudado poderiam ser coletados pelos próprios alunos?</li>
+</ol>
+</section>
+
+<section id="avaliacao">
+<h2>📋 Avaliação de Matemática Aplicada à Ecologia</h2>
+<div class="exercise"><b>1.</b> Um chuveiro gasta 9 L/min. Uma pessoa toma banho por 15 min diariamente durante 30 dias. Qual o consumo?<br>
+A) 135 L &nbsp; B) 2.700 L &nbsp; C) 4.050 L &nbsp; D) 5.400 L</div>
+<div class="exercise"><b>2.</b> Um caminhão usa 100 L de diesel. Com 2,603 kg CO₂/L, qual a emissão?<br>
+A) 26,03 kg &nbsp; B) 260,30 kg &nbsp; C) 2.603 kg &nbsp; D) 260,30 t</div>
+<div class="exercise"><b>3.</b> Uma escola emite 1.100 kg CO₂/ano. Com absorção de 22 kg por árvore/ano, quantas árvores são necessárias?<br>
+A) 40 &nbsp; B) 45 &nbsp; C) 50 &nbsp; D) 55</div>
+<button onclick="alert('Gabarito da avaliação: 1-C | 2-B | 3-C')">Ver gabarito</button>
+</section>
+
+<section>
+<h2>🎓 Sugestão de encaminhamento pedagógico</h2>
+<p><b>Etapa 1:</b> apresentar o fenômeno ambiental e seus dados.</p>
+<p><b>Etapa 2:</b> revisar o conteúdo matemático necessário.</p>
+<p><b>Etapa 3:</b> resolver o exemplo coletivamente.</p>
+<p><b>Etapa 4:</b> aplicar a lista de exercícios.</p>
+<p><b>Etapa 5:</b> discutir os resultados em sala, relacionando Matemática, Ciências, Ecologia e conhecimentos tradicionais.</p>
+<p><b>Etapa 6:</b> propor que os alunos criem um novo problema matemático baseado em dados de um bioma.</p>
+</section>
+</main>
+
+<footer>Biomas em Números — material didático interativo</footer>
+
+<script>
+function n(id){return Number(document.getElementById(id).value)||0}
+function calcular(){
+ const k=n('kwh'),g=n('gas'),d=n('diesel'),b=n('banho');
+ const mensal=k*.085+g*2.269+d*2.603;
+ const anual=mensal*12, agua=b*9*365, arvores=Math.ceil(anual/22);
+ document.getElementById('calcResultado').innerHTML=
+ `Emissão mensal: ${mensal.toFixed(2)} kg CO₂<br>
+ Emissão anual: ${anual.toFixed(2)} kg (${(anual/1000).toFixed(3)} t)<br>
+ Água anual dos banhos: ${agua.toFixed(0)} L<br>
+ Árvores necessárias para neutralizar a emissão estimada: ${arvores}`;
+}
+function resultado(id,msg){let e=document.getElementById(id);e.style.display='block';e.innerHTML=msg}
+function corrigir(q){
+ let v,ok=false,msg='';
+ if(q==1){v=n('q1a');ok=Math.abs(v-108)<.01;resultado('r1',ok?'✓ 1a correto! 12×9 = 108 L/dia.':'Resposta esperada: 108 L/dia. Para 30 dias: 3.240 L.');}
+ if(q==2){v=n('q2a');ok=Math.abs(v-340.35)<.1;resultado('r2',ok?'✓ 2a correto! 150×2,269 = 340,35 kg.':'Resposta esperada: 340,35 kg/mês. Em um ano: 4.084,20 kg = 4,0842 t.');}
+ if(q==3){v=n('q3');ok=v===69;resultado('r3',ok?'✓ Correto! 1500÷22 = 68,18; é preciso arredondar para 69 árvores.':'Resposta esperada: 69 árvores.');}
+ if(q==4){v=n('q4');ok=v===200;resultado('r4',ok?'✓ Correto! 25% de 800 = 200 ha.':'Resposta esperada: 200 hectares.');}
+ if(q==5){v=n('q5');ok=Math.abs(v-160)<.01;resultado('r5',ok?'✓ Correto! (180+220+160+140+100)÷5 = 160 mm.':'Resposta esperada: 160 mm.');}
+ if(q==6){v=n('q6');ok=Math.abs(v-2.75)<.001;resultado('r6',ok?'✓ Correto! 2750÷1000 = 2,75 t.':'Resposta esperada: 2,75 toneladas.');}
+ if(q==7){v=n('q7');ok=v===1500;resultado('r7',ok?'✓ Correto! 500×3 = 1.500 L/dia.':'Resposta esperada: 1.500 L/dia.');}
+ if(q==8){v=n('q8');ok=Math.abs(v-3)<.01;resultado('r8',ok?'✓ Correto! Área = 2×1,5 = 3 km².':'Resposta esperada: 3 km².');}
+}
+function mostrarGabarito(){document.getElementById('gabarito').style.display='block'}
+calcular();
+</script>
+</body>
+</html>
